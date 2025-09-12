@@ -44,7 +44,7 @@ This Readme-Generator simplifies the process of creating README files. By provid
 * **Gemini API**
 
 ## Deployed Link and Running Prototype
-*https://readme-generator-five-lovat.vercel.app
+https://readme-generator-five-lovat.vercel.app
 <br>
-*https://drive.google.com/file/d/1N79BG0WYybmSuUht8LjJ551DxY5T1eBH/view?usp=sharing
+https://drive.google.com/file/d/1N79BG0WYybmSuUht8LjJ551DxY5T1eBH/view?usp=sharing
 
