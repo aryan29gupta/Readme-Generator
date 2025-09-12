@@ -1,6 +1,6 @@
 # Readme-Generator
 
-A command-line application built with Node.js that automatically generates professional README.md files for your projects.  Save time and ensure consistency in your project documentation.
+A command-line application that automatically generates professional README.md files for your projects.  Save time and ensure consistency in your project documentation.
 
 ## Description
 
