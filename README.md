@@ -1,6 +1,6 @@
 # Readme-Generator
 
-A command-line application built with Node.js that automatically generates professional README.md files for your projects.  Save time and ensure consistency in your project documentation.
+A command-line application that automatically generates professional README.md files for your projects.  Save time and ensure consistency in your project documentation.
 
 ## Description
 
@@ -38,11 +38,13 @@ This Readme-Generator simplifies the process of creating README files. By provid
 
 ## Tech Stack
 
-* **Node.js:**  JavaScript runtime environment.
-* **Inquirer.js:** For creating interactive command-line interfaces.
-* **(Add other technologies used here, e.g., Markdown libraries, etc.)**
+* **React.js**
+* **Express.js**
+* **Github API**
+* **Gemini API**
 
+## Deployed Link and Running Prototype
+https://readme-generator-five-lovat.vercel.app
+<br>
+https://drive.google.com/file/d/1N79BG0WYybmSuUht8LjJ551DxY5T1eBH/view?usp=sharing
 
-## License
-
-This project is licensed under the [Choose a License - e.g., MIT License](https://opensource.org/licenses/MIT).  See the `LICENSE` file for details.
