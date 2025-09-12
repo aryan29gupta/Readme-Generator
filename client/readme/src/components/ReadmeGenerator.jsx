@@ -7,7 +7,6 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
   const [loading, setLoading] = useState(false);
   const [useDropdown, setUseDropdown] = useState(true);
 
-  // Handle repository selection from dropdown
   const handleRepoSelect = async (repoUrl) => {
     if (!repoUrl) {
       setRepoData(null);
@@ -19,13 +18,11 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
     setLoading(true);
 
     try {
-      // Find the selected repository from the repositories array
       const selectedRepository = repositories.find(repo => repo.html_url === repoUrl);
       
       if (selectedRepository) {
         setRepoData(selectedRepository);
       } else {
-        // Fallback: fetch repo data from URL
         const response = await fetch(`https://readme-generator-7mpr.onrender.com/fetch-repo`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -42,7 +39,6 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
     }
   };
 
-  // Handle manual repo URL input
   const fetchRepo = async () => {
     if (!repoUrl) return;
     

@@ -10,7 +10,6 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch user data and repositories
   useEffect(() => {
     const token = localStorage.getItem("github_token");
     if (!token) {
@@ -22,7 +21,6 @@ const Home = () => {
       try {
         setLoading(true);
         
-        // Fetch user profile
         const userResponse = await axios.get("https://api.github.com/user", {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -31,7 +29,6 @@ const Home = () => {
         });
         setUser(userResponse.data);
 
-        // Fetch user repositories
         const reposResponse = await axios.get("https://api.github.com/user/repos", {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -39,7 +36,7 @@ const Home = () => {
           },
           params: {
             sort: "updated",
-            per_page: 100, // Get up to 100 repos
+            per_page: 100, 
           },
         });
         setRepositories(reposResponse.data);
@@ -47,7 +44,7 @@ const Home = () => {
       } catch (err) {
         console.error("Error fetching user data:", err);
         setError("Failed to fetch user data");
-        // If token is invalid, redirect to login
+        
         if (err.response?.status === 401) {
           localStorage.removeItem("github_token");
           navigate("/login");
@@ -186,7 +183,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="w-full bg-gray-800 text-white py-6 text-center">
-        <p className="text-sm">&copy; {new Date().getFullYear()} README Generator. All rights reserved.</p>
+        <p className="text-sm">&copy; 2025 README Generator. All rights reserved.</p>
       </footer>
     </div>
   );

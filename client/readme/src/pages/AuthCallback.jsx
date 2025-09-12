@@ -23,7 +23,7 @@ const AuthCallback = () => {
         }
 
         localStorage.setItem("github_token", accessToken);
-        navigate("/"); // redirect to homepage
+        navigate("/"); 
       } catch (err) {
         console.error("GitHub OAuth failed:", err);
       }
