@@ -11,10 +11,11 @@ const AuthCallback = () => {
       console.error("No code in URL");
       return;
     }
+    
 
     const fetchToken = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/auth/github", { code });
+        const res = await axios.post(`https://readme-generator-7mpr.onrender.com/auth/github`, { code });
         const { accessToken } = res.data;
         if (!accessToken) {
           console.error("No access token returned");

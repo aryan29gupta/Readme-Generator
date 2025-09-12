@@ -26,7 +26,7 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
         setRepoData(selectedRepository);
       } else {
         // Fallback: fetch repo data from URL
-        const response = await fetch("http://localhost:5000/fetch-repo", {
+        const response = await fetch(`https://readme-generator-7mpr.onrender.com/fetch-repo`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ repoUrl }),
@@ -48,7 +48,7 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
     
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/fetch-repo", {
+      const response = await fetch(`https://readme-generator-7mpr.onrender.com/fetch-repo`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repoUrl }),
@@ -68,7 +68,7 @@ const ReadmeGenerator = ({ repositories = [], user }) => {
     
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/generate-readme", {
+      const response = await fetch("https://readme-generator-7mpr.onrender.com/generate-readme", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repoData }),
