@@ -8,6 +8,7 @@ const Login = () => {
 };
 
 
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="bg-white p-10 rounded-xl shadow-lg text-center max-w-md w-full">
